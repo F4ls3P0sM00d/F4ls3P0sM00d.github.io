@@ -9,7 +9,7 @@ toc: true
 
 ## Overview
 
-Dead Drop is two boxes wearing a trenchcoat. Out front there's a single web server in a DMZ; behind it, a Windows domain you can't reach until you've owned that web server and turned it into a doorway. Almost none of the work is a clever one-shot exploit — it's credential-hunting and pivoting, one scrap of loot leading to the next.
+Dead Drop ([TryHackMe](https://tryhackme.com/room/dead-drop)) is two boxes wearing a trenchcoat. Out front there's a single web server in a DMZ; behind it, a Windows domain you can't reach until you've owned that web server and turned it into a doorway. Almost none of the work is a clever one-shot exploit — it's credential-hunting and pivoting, one scrap of loot leading to the next.
 
 The path keeps changing shape, which is the fun of it. SQL injection gets us past the login. The file manager behind it takes any upload you throw at it, so the reflex is a PHP webshell — except that does nothing here, because the backend is Node, and a `.php` file is just text to it. A Node reverse shell fired through the app's own *Preview* button drops a shell as the `node` user. After that it's a scavenger hunt: a shadow backup left in the web root cracks to give `svc-drop` over SSH, and `svc-drop`'s home hides a mobile APK with a domain password baked into it. Tunnel through the box, throw those creds at the internal subnet, and the domain controller comes back `Pwn3d!`.
 
