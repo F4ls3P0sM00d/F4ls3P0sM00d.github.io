@@ -9,7 +9,7 @@ toc: true
 
 ## Overview
 
-**Interceptor** is a medium-difficulty web challenge on TryHackMe centered on *MediaHub*, a small media-sharing application. The box is a tour through a realistic web-attack chain: directory enumeration leads to a leaked backup file, the backup discloses a predictable password policy, an authentication-bypass defeats the OTP second factor, and a Server-Side Request Forgery (SSRF) in an "Import Feed" feature is escalated into command injection to read the final flag.
+**Interceptor** ([TryHackMe](https://tryhackme.com/room/interceptor)) is a medium-difficulty web challenge centered on *MediaHub*, a small media-sharing application. The box is a tour through a realistic web-attack chain: directory enumeration leads to a leaked backup file, the backup discloses a predictable password policy, an authentication-bypass defeats the OTP second factor, and a Server-Side Request Forgery (SSRF) in an "Import Feed" feature is escalated into command injection to read the final flag.
 
 The room's name is a hint: nearly every step relies on **intercepting and tampering with HTTP requests**. The official recommendation is Burp Suite; this walkthrough uses [Caido](https://caido.io/), but every step maps directly onto Burp's Repeater/Intruder workflow.
 

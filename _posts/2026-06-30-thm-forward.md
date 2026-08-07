@@ -9,7 +9,7 @@ toc: true
 
 ## Overview
 
-**Forward** is an assumed-breach Active Directory challenge on TryHackMe: there's no initial-access puzzle to solve, the room hands you a low-privilege domain account and dares you to see how far it goes.
+**Forward** ([TryHackMe](https://tryhackme.com/room/forwardchallenge)) is an assumed-breach Active Directory challenge: there's no initial-access puzzle to solve, the room hands you a low-privilege domain account and dares you to see how far it goes.
 
 
 ![Initial access banner](../assets/img/posts/2026-06-30-thm-forward/image-6.png)
