@@ -1,0 +1,25 @@
+---
+---
+
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}'
+);
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+/* Scale up the post/page body text (theme default is 1.08rem / 1.03rem) */
+.content {
+  font-size: 1.15rem;
+
+  /* xl screens (>=1200px): theme drops this to 1.03rem by default */
+  @media (min-width: 1200px) {
+    font-size: 1.1rem;
+  }
+}
